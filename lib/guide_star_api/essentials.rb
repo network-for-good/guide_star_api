@@ -21,7 +21,7 @@ module GuideStarApi
       request.headers["Subscription-Key"] = GuidestarSearch.configuration.essentials_subscription_key
     end
 
-    def get_base_uri
+    def self.get_base_uri
       if GuideStarApi.configuration.sandbox?
         GuideStarApi::Configuration::ESSENTIALS_SANDBOX_ENDPOINT
       else
