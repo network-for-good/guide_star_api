@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require "flexirest"
 
 module GuideStarApi
   class Essentials < Flexirest::Base
@@ -15,10 +16,17 @@ module GuideStarApi
 
     post :search, "/", ignore_root: %w[data hits]
 
+    def self.org_lookup(search_terms)
+      search(search_terms: search_terms)
+    rescue Flexirest::HTTPNotFoundClientException, Flexirest::TimeoutException
+      # return an empty iterator with 0 results
+      Flexirest::ResultIterator.new
+    end
+
     private
 
     def add_authentication_details(_name, request)
-      request.headers["Subscription-Key"] = GuidestarSearch.configuration.essentials_subscription_key
+      request.headers["Subscription-Key"] = GuideStarApi.configuration.essentials_subscription_key
     end
   end
 end

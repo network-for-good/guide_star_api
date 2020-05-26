@@ -1,0 +1,73 @@
+PATH
+  remote: .
+  specs:
+    guide_star_api (0.1.0)
+      flexirest (~> 1.9)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.2.4.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    concurrent-ruby (1.1.6)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    diff-lcs (1.3)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
+    flexirest (1.9.15)
+      activesupport
+      crack
+      faraday
+      mime-types
+      multi_json
+    hashdiff (1.0.1)
+    i18n (1.8.2)
+      concurrent-ruby (~> 1.0)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2020.0512)
+    minitest (5.14.1)
+    multi_json (1.14.1)
+    multipart-post (2.1.1)
+    public_suffix (4.0.5)
+    rake (13.0.1)
+    rspec (3.9.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+    rspec-core (3.9.2)
+      rspec-support (~> 3.9.3)
+    rspec-expectations (3.9.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.3)
+    safe_yaml (1.0.5)
+    thread_safe (0.3.6)
+    tzinfo (1.2.7)
+      thread_safe (~> 0.1)
+    webmock (3.8.3)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.17)
+  guide_star_api!
+  rake (>= 12.3.3)
+  rspec (~> 3.0)
+  webmock
+
+BUNDLED WITH
+   1.17.3
