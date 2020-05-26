@@ -17,8 +17,8 @@ RSpec.describe GuideStarApi do
       GuideStarApi.configure { |config| config.essentials_subscription_key = 'yourGuideStarAPIKey' }
     end
 
-    context ".org_lookup" do
-      subject { GuideStarApi::Essentials.org_lookup(search_terms) }
+    context ".search" do
+      subject { GuideStarApi::Essentials.search(search_terms) }
 
       context 'when the search term is for a valid ein that guidestar tracks' do
         before do
