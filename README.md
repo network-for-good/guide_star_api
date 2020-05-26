@@ -20,18 +20,17 @@ Or install it yourself as:
 
 ### Configure
 
-Pretty straightforward - just configure with a GuideStar API key (typically in a Rails initializer).  If you're testing, you can set `sandbox` to true to hit the sandbox endpoint.
+Pretty straightforward - just configure with a GuideStar API key (typically in a Rails initializer).
 
 ``` ruby
 GuideStarApi.configure do |config|
   config.essentials_subscription_key = 'yourGuideStarAPIKey'
-  config.sandbox = true
 end
 ```
 
 ### Search
 
-Pass accepted `search_terms` params into the search method, as defined here: https://data.guidestar.org/#guidestar_search
+Pass accepted `search_terms` params into the search method, as defined here: https://apiportal.guidestar.org/docs/services/microservices.api.search/export?DocumentFormat=Swagger
 
 ``` ruby
 GuideStarApi::Essentials.search(search_terms: '68-0480734')

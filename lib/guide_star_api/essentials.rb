@@ -10,16 +10,8 @@ module GuideStarApi
     verbose true
 
     request_body_type :json
-
-    def self.get_base_uri
-      if GuideStarApi.configuration.sandbox?
-        GuideStarApi::Configuration::ESSENTIALS_SANDBOX_ENDPOINT
-      else
-        GuideStarApi::Configuration::ESSENTIALS_ENDPOINT
-      end
-    end
     
-    base_url get_base_uri
+    base_url 'https://apidata.guidestar.org/essentials/v2'
 
     post :search, "/", ignore_root: %w[data hits]
 
