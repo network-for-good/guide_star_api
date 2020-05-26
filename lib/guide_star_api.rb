@@ -2,7 +2,6 @@
 
 require "guide_star_api/version"
 require "guide_star_api/configuration"
-require "guide_star_api/essentials"
 
 module GuideStarApi
   class Error < StandardError; end
@@ -23,3 +22,5 @@ module GuideStarApi
     end
   end
 end
+
+require "guide_star_api/essentials"
