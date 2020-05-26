@@ -1,16 +1,12 @@
 # GuideStarApi
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/guide_star_api`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple wrapper for the https://data.guidestar.org/ API V2.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'guide_star_api'
-```
+    gem 'guide_star_api'
 
 And then execute:
 
@@ -22,7 +18,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configure
+
+Pretty straightforward - just configure with a GuideStar API key (typically in a Rails initializer).  If you're testing, you can set `sandbox` to true to hit the sandbox endpoint.
+
+``` ruby
+GuideStarApi.configure do |config|
+  config.essentials_subscription_key = 'yourGuideStarAPIKey'
+  config.sandbox = true
+end
+```
+
+### Search
+
+Pass accepted `search_terms` params into the search method, as defined here: https://data.guidestar.org/#guidestar_search
+
+``` ruby
+GuideStarApi::Essentials.search(search_terms: '68-0480734')
+```
 
 ## Development
 
