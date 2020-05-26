@@ -14,10 +14,10 @@ module GuideStarApi
     
     base_url 'https://apidata.guidestar.org/essentials/v2'
 
-    post :lookup, "/", ignore_root: %w[data hits]
+    post :search!, "/", ignore_root: %w[data hits]
 
     def self.search(search_terms)
-      lookup(search_terms: search_terms)
+      search!(search_terms: search_terms)
     rescue Flexirest::HTTPNotFoundClientException, Flexirest::TimeoutException
       # return an empty iterator with 0 results
       Flexirest::ResultIterator.new
