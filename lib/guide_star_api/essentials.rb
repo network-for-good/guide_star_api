@@ -4,7 +4,7 @@ require "flexirest"
 module GuideStarApi
   class Essentials < Flexirest::Base
     # search requires that a search_terms value gets passed to the call
-    # i.e. GuideStarApi::Essentials.search(search_terms: '68-0480734')
+    # i.e. GuideStarApi::Essentials.search('68-0480734')
 
     # documentation: https://apiportal.guidestar.org/api-static-documentation-v2
     before_request :add_authentication_details
