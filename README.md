@@ -33,7 +33,7 @@ end
 Pass accepted `search_terms` params into the search method, as defined here: https://apiportal.guidestar.org/docs/services/microservices.api.search/export?DocumentFormat=Swagger
 
 ``` ruby
-GuideStarApi::Essentials.search('68-0480734')
+GuideStarApi::Essentials.search(search_terms: '68-0480734')
 ```
 
 ## Development

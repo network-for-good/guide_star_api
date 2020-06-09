@@ -18,7 +18,7 @@ RSpec.describe GuideStarApi do
     end
 
     context ".search" do
-      subject { GuideStarApi::Essentials.search(search_terms) }
+      subject { GuideStarApi::Essentials.search(search_terms: search_terms) }
 
       context 'when the search term is for a valid ein that guidestar tracks' do
         before do
@@ -40,9 +40,8 @@ RSpec.describe GuideStarApi do
 
         let(:search_terms) { '52-1111111' }
 
-        it 'returns a result object with empty data' do
-          expect(subject.size).to eq(0)
-          expect(subject.first).to be_nil
+        it 'returns a error' do
+          expect { subject }.to raise_error(Flexirest::HTTPNotFoundClientException)
         end
       end
     end
