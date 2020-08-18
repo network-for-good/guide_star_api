@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Thomas Hoen", "Pavan Kumar"]
   spec.email         = ["pavan@clearstack.io", "tom@givecorps.com"]
 
-  spec.summary       = "Wrapper for GuideStar api v2"
-  spec.description   = "Wrapper for GuideStar api v2"
+  spec.summary       = "Wrapper for GuideStar Essentials and Premier APIs"
+  spec.description   = "Wrapper for GuideStar Essentials and Premier APIs"
   spec.homepage      = "https://github.com/network-for-good/guide_star_api"
   spec.license       = "MIT"
 
@@ -32,16 +32,17 @@ Gem::Specification.new do |spec|
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
+
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'flexirest', "~> 1.9"
+  spec.add_dependency 'flexirest', "~> 1" # "~> 1.9"
 
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", ">= 12.3.3"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "rspec_junit_formatter"
   spec.add_development_dependency "webmock"
-
+  spec.add_development_dependency "vcr", '~> 6'
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module GuideStarStubs
+module GuideStarEssentialsStubs
   def stub_search(search_terms, status_code, response_body)
     stub_request(:post, "https://apidata.guidestar.org/essentials/v2/")
       .with(
