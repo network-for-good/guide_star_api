@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     guide_star_api (0.3.0)
-      flexirest (= 1.10.9)
+      flexirest
 
 GEM
   remote: https://rubygems.org/
