@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     guide_star_api (0.3.0)
-      flexirest (~> 1.10.12)
+      flexirest (= 1.10.9)
 
 GEM
   remote: https://rubygems.org/
@@ -14,37 +14,20 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    base64 (0.1.1)
     concurrent-ruby (1.2.2)
     crack (0.4.5)
       rexml
     diff-lcs (1.3)
-    faraday (1.10.3)
-      faraday-em_http (~> 1.0)
-      faraday-em_synchrony (~> 1.0)
-      faraday-excon (~> 1.1)
-      faraday-httpclient (~> 1.0)
-      faraday-multipart (~> 1.0)
-      faraday-net_http (~> 1.0)
-      faraday-net_http_persistent (~> 1.0)
-      faraday-patron (~> 1.0)
-      faraday-rack (~> 1.0)
-      faraday-retry (~> 1.0)
+    faraday (2.7.11)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
-    faraday-em_http (1.0.0)
-    faraday-em_synchrony (1.0.0)
-    faraday-excon (1.1.0)
-    faraday-httpclient (1.0.1)
-    faraday-multipart (1.0.4)
-      multipart-post (~> 2)
-    faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.2.0)
-    faraday-patron (1.0.0)
-    faraday-rack (1.0.0)
-    faraday-retry (1.0.3)
-    flexirest (1.10.12)
+    faraday-net_http (3.0.2)
+    flexirest (1.10.9)
       activesupport
       crack
-      faraday (~> 1.0)
+      faraday
       mime-types
       multi_json
     hashdiff (1.0.1)
@@ -55,7 +38,6 @@ GEM
     mime-types-data (3.2023.0808)
     minitest (5.20.0)
     multi_json (1.15.0)
-    multipart-post (2.3.0)
     public_suffix (4.0.5)
     rexml (3.2.6)
     rspec (3.9.0)
