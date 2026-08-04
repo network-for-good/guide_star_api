@@ -154,7 +154,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (= 7.2.3.1)
-  bundler (>= 2.3)
+  bundler (>= 4.0)
   guide_star_api!
   rake (>= 12.3.3)
   rspec (~> 3.0)
